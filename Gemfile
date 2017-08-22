@@ -54,7 +54,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Gems installed after
 
-gem 'haml'
+gem 'haml-rails'
+gem 'html2haml'
 gem 'devise'
 gem 'erubis'
 gem 'sidekiq'

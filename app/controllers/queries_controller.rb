@@ -11,7 +11,7 @@ class QueriesController < ApplicationController
 
   def create
     @query_object = Query.new(query_params)
-    @query_object.name = "#{@query_object.source} #{@query_object.location} - #{Time.now.strftime("%m/%d/%Y at %I:%M%p")}"
+    @query_object.name = "#{@query_object.source} #{@query_object.location} - #{Time.zone.now.strftime("%m/%d/%Y at %I:%M%p")}"
 
     results = @query_object.query
 

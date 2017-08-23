@@ -1,0 +1,14 @@
+current directory: /Users/ericscharnak/Documents/code/tryittiny/tryittiny/vendor/cache/ruby/2.4.0/gems/interception-0.5/ext
+/Users/ericscharnak/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20170822-91911-i39hrc.rb extconf.rb
+
+current directory: /Users/ericscharnak/Documents/code/tryittiny/tryittiny/vendor/cache/ruby/2.4.0/gems/interception-0.5/ext
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/ericscharnak/Documents/code/tryittiny/tryittiny/vendor/cache/ruby/2.4.0/gems/interception-0.5/ext
+make "DESTDIR="
+:
+
+current directory: /Users/ericscharnak/Documents/code/tryittiny/tryittiny/vendor/cache/ruby/2.4.0/gems/interception-0.5/ext
+make "DESTDIR=" install
+:

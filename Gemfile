@@ -42,6 +42,12 @@ group :development, :test do
   # added after
 
   gem 'awesome_print'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-rescue'
+  gem 'pry-stack_explorer'
+  gem 'pry-doc'
 end
 
 group :development do
@@ -55,6 +61,7 @@ group :development do
   # added after
 
   gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -71,3 +78,4 @@ gem 'jquery-rails'
 gem 'bootstrap'
 gem 'figaro'
 gem 'mechanize'
+gem 'simple_form'

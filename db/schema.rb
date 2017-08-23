@@ -10,14 +10,58 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170822015244) do
+ActiveRecord::Schema.define(version: 20170823022349) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "results", force: :cascade do |t|
+  create_table "amenities", force: :cascade do |t|
+    t.string "name"
+    t.integer "result_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "contact_informations", force: :cascade do |t|
+    t.string "name"
+    t.integer "result_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "phone_numbers", force: :cascade do |t|
+    t.string "number"
+    t.integer "contact_information_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "queries", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "source"
+    t.string "location"
+  end
+
+  create_table "results", force: :cascade do |t|
+    t.integer "listing_id"
+    t.string "address"
+    t.string "price"
+    t.string "bedrooms"
+    t.string "bathrooms"
+    t.string "garage"
+    t.string "result_type"
+    t.string "subtype"
+    t.string "lot_size"
+    t.string "square_feet"
+    t.string "year_built"
+    t.string "school_district"
+    t.string "subdivision"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "query_id"
   end
 
   create_table "users", force: :cascade do |t|

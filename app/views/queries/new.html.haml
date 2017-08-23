@@ -1,0 +1,5 @@
+= simple_form_for @query do |f|
+  = f.input :location
+  = f.input :source, as: :select, collection: Query::VALID_SOURCES.keys
+
+  = f.submit

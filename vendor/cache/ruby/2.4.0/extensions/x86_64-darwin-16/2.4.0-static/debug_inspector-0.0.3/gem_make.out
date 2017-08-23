@@ -1,0 +1,15 @@
+current directory: /Users/ericscharnak/Documents/code/tryittiny/tryittiny/vendor/cache/ruby/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+/Users/ericscharnak/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20170822-85920-14dfwsf.rb extconf.rb
+creating Makefile
+
+current directory: /Users/ericscharnak/Documents/code/tryittiny/tryittiny/vendor/cache/ruby/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/ericscharnak/Documents/code/tryittiny/tryittiny/vendor/cache/ruby/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/ericscharnak/Documents/code/tryittiny/tryittiny/vendor/cache/ruby/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 debug_inspector.bundle ./.gem.20170822-85920-ffzm09

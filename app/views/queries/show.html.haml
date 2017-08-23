@@ -1,0 +1,34 @@
+= link_to 'Back', queries_path
+
+- @results.each do |result|
+  %table.table.table-bordered
+    %tr
+      %th Listing ID
+      %th Address
+      %th Price
+      %th Bedrooms
+      %th Bathrooms
+      %th Garage
+      %th Type
+      %th Subtype
+      %th Lot Size
+      %th Square Feet
+      %th Year Built
+      %th School District
+      %th Subdivision
+    %tr
+      %td= result.listing_id
+      %td= result.address
+      %td= result.price
+      %td= result.bedrooms
+      %td= result.bathrooms
+      %td= result.garage
+      %td= result.result_type
+      %td= result.subtype
+      %td= result.lot_size
+      %td= result.square_feet
+      %td= result.year_built
+      %td= result.school_district
+      %td= result.subdivision
+    %tr
+      %td{colspan: 13}= result.description

@@ -13,7 +13,6 @@ class Query < ApplicationRecord
     form.searchQuery = location
     page = form.submit
     listing_links = page.links_with(css: '.fsbo-button')
-
     listing_links.each do |listing_link|
       if listing_link.text == "View Listing Details"
         page = listing_link.click
@@ -37,7 +36,7 @@ class Query < ApplicationRecord
           hsh
         end
 
-        results.new(
+        result = results.new(
             listing_id: detail_results["Listing Id"],
             bedrooms: detail_results["Bedrooms"],
             bathrooms: detail_results["Bahtrooms"],
@@ -52,6 +51,14 @@ class Query < ApplicationRecord
             price: price,
             address: address,
             description: description,
+          )
+
+        contact_information = result.contact_informations.new(
+            name: contact_info.first
+          )
+
+        contact_information.phone_numbers.new(
+            number: contact_info.second
           )
       end
     end

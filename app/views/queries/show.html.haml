@@ -3,7 +3,6 @@
 - @results.each do |result|
   %table.table.table-bordered
     %tr
-      %th Listing ID
       %th Address
       %th Price
       %th Bedrooms
@@ -17,7 +16,6 @@
       %th School District
       %th Subdivision
     %tr
-      %td= result.listing_id
       %td= result.address
       %td= result.price
       %td= result.bedrooms
@@ -30,5 +28,15 @@
       %td= result.year_built
       %td= result.school_district
       %td= result.subdivision
+    - result.contact_informations.each do |contact_information|
+      %tr
+        %th{colspan: 12} Contact Information
+      %tr
+        %td{colspan: 12}
+          = contact_information.name
+          %ul
+          - if contact_information.phone_numbers.present?
+            - contact_information.phone_numbers.each do |phone_number|
+              %li= phone_number.number
     %tr
-      %td{colspan: 13}= result.description
+      %td{colspan: 12}= result.description

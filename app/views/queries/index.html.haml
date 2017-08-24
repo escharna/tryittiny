@@ -5,8 +5,10 @@
     %th Name
     %th Location
     %th Created On
+    %th
   - @queries.each do |query|
     %tr
       %td= link_to query.name, query_path(query)
       %td= query.location
       %td= query.created_at.strftime("%m/%d/%Y")
+      %td= link_to "Delete", query_path(query), method: 'Delete'

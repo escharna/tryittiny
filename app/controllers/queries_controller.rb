@@ -27,6 +27,17 @@ class QueriesController < ApplicationController
     @results = @query.results
   end
 
+  def destroy
+    @query = Query.find(params[:id])
+
+    if @query.destroy
+      flash[:notice] = "Query destroyed."
+      redirect_to queries_path
+    else
+      render action: :edit
+    end
+  end
+
   private
 
   def query_params

@@ -12,5 +12,5 @@
     %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}
 
   %body
-    = link_to 'sign out', destroy_user_session_path, method: 'delete'
+    = link_to 'sign out', destroy_user_session_path, method: 'delete' if current_user.present?
     = yield

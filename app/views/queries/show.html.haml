@@ -1,42 +1,35 @@
 = link_to 'Back', queries_path
 
 - @results.each do |result|
-  %table.table.table-bordered
-    %tr
-      %th Address
-      %th Price
-      %th Bedrooms
-      %th Bathrooms
-      %th Garage
-      %th Type
-      %th Subtype
-      %th Lot Size
-      %th Square Feet
-      %th Year Built
-      %th School District
-      %th Subdivision
-    %tr
-      %td= result.address
-      %td= result.price
-      %td= result.bedrooms
-      %td= result.bathrooms
-      %td= result.garage
-      %td= result.result_type
-      %td= result.subtype
-      %td= result.lot_size
-      %td= result.square_feet
-      %td= result.year_built
-      %td= result.school_district
-      %td= result.subdivision
-    - result.contact_informations.each do |contact_information|
+  .panel.panel-default
+    .panel-heading
+      = "#{result.contact_informations.first.name} - #{result.contact_informations.first.phone_numbers.first.number}"
+    %table.table.table-bordered
       %tr
-        %th{colspan: 12} Contact Information
+        %td{colspan: 12}= result.description
       %tr
-        %td{colspan: 12}
-          = contact_information.name
-          %ul
-          - if contact_information.phone_numbers.present?
-            - contact_information.phone_numbers.each do |phone_number|
-              %li= phone_number.number
-    %tr
-      %td{colspan: 12}= result.description
+        %th Address
+        %th Price
+        %th Bedrooms
+        %th Bathrooms
+        %th Garage
+        %th Type
+        %th Subtype
+        %th Lot Size
+        %th Square Feet
+        %th Year Built
+        %th School District
+        %th Subdivision
+      %tr
+        %td= result.address
+        %td= result.price
+        %td= result.bedrooms
+        %td= result.bathrooms
+        %td= result.garage
+        %td= result.result_type
+        %td= result.subtype
+        %td= result.lot_size
+        %td= result.square_feet
+        %td= result.year_built
+        %td= result.school_district
+        %td= result.subdivision

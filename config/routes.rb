@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   authenticated :user do
-    root 'results#index', as: :authenticated_root
+    root 'queries#index', as: :authenticated_root
   end
 
   devise_scope :user do

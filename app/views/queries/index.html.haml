@@ -1,3 +1,5 @@
+= link_to "Create new Query", new_query_path
+
 %ul
 - @queries.each do |query|
   %li= link_to query.name, query_path(query)

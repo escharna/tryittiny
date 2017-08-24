@@ -1,5 +1,12 @@
 = link_to "Create new Query", new_query_path
 
-%ul
-- @queries.each do |query|
-  %li= link_to query.name, query_path(query)
+%table.table.table-bordered
+  %tr
+    %th Name
+    %th Location
+    %th Created On
+  - @queries.each do |query|
+    %tr
+      %td= link_to query.name, query_path(query)
+      %td= query.location
+      %td= query.created_at.strftime("%m/%d/%Y")

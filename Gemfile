@@ -69,6 +69,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Gems installed after
 
+gem 'mail'
 gem 'haml-rails'
 gem 'html2haml'
 gem 'devise'

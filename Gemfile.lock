@@ -304,6 +304,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   listen (>= 3.0.5, < 3.2)
+  mail
   mail_room
   mechanize
   pg (~> 0.18)
